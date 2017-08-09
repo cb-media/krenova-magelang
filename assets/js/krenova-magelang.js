@@ -80,4 +80,6 @@ $(document).ready(function() {
         offset: 51
     });
 
+    $('[data-toggle="tooltip"]').tooltip();
+
 });
