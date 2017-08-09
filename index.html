@@ -10,6 +10,9 @@
     <!-- Fontawesome -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
 
+    <!-- Intro CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.6.0/introjs.min.css' />
+
     <!-- Bootstap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -22,6 +25,8 @@
 </head>
 
 <body id="home">
+
+    <a class="btn btn-large btn-success btn-guide" href="javascript:void(0);" onclick="javascript:introJs().setOption('tooltipClass', 'customDefault').start();"><i class="fa fa-info-circle"></i> Bantuan</a>
 
     <header class="container-fluid" id="menu">
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -43,12 +48,12 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="page-scroll" href="#home" class="hvr-sweep-to-top">HOME</a></li>
-                        <li><a class="page-scroll" href="#kategori" class="hvr-sweep-to-top">KATEGORI</a></li>
-                        <li><a class="page-scroll" href="#alur" class="hvr-sweep-to-top">ALUR</a></li>
-                        <li><a href="about.html" class="hvr-sweep-to-top" data-step="6" data-intro="Lebih Dekat dengan Krenova" data-position='left'>ABOUT US</a></li>
-                        <li><a class="page-scroll" href="#news" class="hvr-sweep-to-top">NEWS</a></li>
-                        <li class="dropdown" data-step="7" data-intro="Member Area" data-position='left'>
+                        <li><a class="page-scroll hvr-sweep-to-top" href="#home">HOME</a></li>
+                        <li><a class="page-scroll hvr-sweep-to-top" href="#kategori">KATEGORI</a></li>
+                        <li><a class="page-scroll hvr-sweep-to-top" href="#alur">ALUR</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a class="page-scroll hvr-sweep-to-top" href="#news">NEWS</a></li>
+                        <li class="dropdown">
                             <a href="#" class="hvr-sweep-to-top dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEMBER AREA <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#" data-toggle="modal" data-target="#modal-login">Login</a></li>
@@ -72,14 +77,25 @@
                     <span class="primary-text">Bersama</span>
                     <span class="typed"></span> <br>
                     <span class="sub-primary-text">Kota Magelang</span> <br>
-                    <a href="#" class="btn btn-lg btn-primary" data-step="1" data-intro="Daftar Menjadi Peserta Krenova" data-position='left'>Daftar Sekarang</a>
+                    <a href="#" class="btn btn-lg btn-primary" data-step="1" data-intro="Daftar Menjadi Peserta Krenova" data-position="left" data-toggle="modal" data-target="#modal-daftar">Daftar Sekarang</a>
                 </h1>
+                <ul class="list-unstyled list-inline list-btn">
+                    <li>
+                        <a href="#" class="btn btn-group-lg primary-btn" data-toggle="tooltip" data-placement="top" title="Pengumuman" role="button" data-step="2" data-intro="Pengumuman Krenova Magelang" data-position="bottom"><i class="fa fa-bullhorn fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-group-lg primary-btn" data-step="3" data-intro="Grafik Krenova Magelang" data-position="bottom" data-toggle="tooltip" data-placement="top" title="Grafik" role="button"><i class="fa fa-bar-chart fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-group-lg primary-btn" data-step="4" data-intro="Penghargaan Krenova Magelang" data-position="bottom" data-toggle="tooltip" data-placement="top" title="Penghargaan" role="button"><i class="fa fa-trophy fa-2x"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section class="container-fluid kategori" id="kategori">
-        <h1 class="text-center"><span data-step="2" data-intro="Pilih kategori sesuai kemampuan anda" data-position='left'>Kategori</span></h1>
+        <h1 class="text-center"><span data-step="5" data-intro="Pilih kategori sesuai kemampuan anda" data-position="left">Kategori</span></h1>
         <br><br>
         <div class="container hidden-sm">
             <div class="container-fluid">
@@ -132,7 +148,7 @@
 
     <section class="container-fluid alur-section" id="alur">
         <div class="container">
-            <h1 class="text-center"><span>Alur Pendaftaran</span></h1>
+            <h1 class="text-center"><span data-step="6" data-intro="Alur Pendaftaran Krenova Magelang" data-position="right">Alur Pendaftaran</span></h1>
             <ul class="timeline">
                 <li>
                     <div class="timeline-badge"><i class="fa fa-file-o"></i></div>
@@ -211,7 +227,7 @@
     </section>
 
     <section class="container-fluid peraturan-section" id="peraturan">
-        <h1 class="text-center"><span>Peraturan Krenova</span></h1>
+        <h1 class="text-center"><span data-step="7" data-intro="Peraturan Krenova Magelang" data-position="bottom">Peraturan Krenova</span></h1>
         <br><br>
         <div class="container">
             <div class="row">
@@ -300,7 +316,7 @@
     </section>
 
     <section class="container-fluid news-section" id="news">
-        <h1 class="text-center"><span data-step="5" data-intro="Simak Berita dan Pengumuman Terbaru Krenova 2017" data-position='right'>Berita & Pengumuman Event</span></h1>
+        <h1 class="text-center"><span data-step="8" data-intro="Simak Berita dan Pengumuman Terbaru Krenova 2017" data-position="right">Berita & Pengumuman Event</span></h1>
         <br><br>
         <div class="container">
             <div class="row">
@@ -554,6 +570,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.6.0/intro.min.js'></script>
     <script src="assets/js/krenova-magelang.js"></script>
 </body>
 
