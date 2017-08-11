@@ -945,6 +945,20 @@ ul.social-buttons li a:active {
     .hero-section h1>a {
         margin-top: 10px;
     }
+    .hero-section .listed {
+        display: none;
+    }
+    .hero-section .listing-mobile {
+        margin: 20px auto;
+    }
+    .hero-section .listing-mobile a {
+        margin: 0px 20px;
+        float: left;
+        background-color: #d9534f;
+        color: #fff;
+        border-radius: 50%;
+        padding: 10px;
+    }
     /* Kategori Section */
     .kategori .kategori-item {
         display: block !important;
