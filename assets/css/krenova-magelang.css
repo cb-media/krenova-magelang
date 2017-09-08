@@ -72,7 +72,7 @@
 
 .hero-section {
     height: 100vh;
-    background: url('../img/bg-hero-2.png') no-repeat center center;
+    background: url('../img/bg-hero-3.png') no-repeat top center;
     background-attachment: fixed;
     background-size: cover;
     /* margin-top: -10px; */
